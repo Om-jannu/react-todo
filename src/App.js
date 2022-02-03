@@ -38,8 +38,8 @@ function App() {
       <div className="container">
         <h2>TODO List</h2>
         <br />
-        <input id='inputfield' type="text" placeholder='Add a ToDo' onChange={itemevent}/>
-        <button onClick={addlisthandler}>+</button>
+          <input autoComplete='off' id='inputfield' type="text" placeholder='Add a ToDo' onChange={itemevent}/>
+          <button onClick={addlisthandler}>+</button>
         <br />
         <ol>
           {/* <li>{inputlist}</li> */
