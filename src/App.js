@@ -1,6 +1,6 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import react, { useState } from 'react';
+import React, { useState } from 'react';
 import Todolist from './components/Todolist';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
 
   const addlisthandler=()=>{
       
-      if(inputfield.value!=""){
+      if(inputfield.value!==""){
         setitems((olditems)=>{
           return [...olditems,inputlist];
         });
