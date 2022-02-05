@@ -1,12 +1,11 @@
 import React from 'react';
-
 const Todolist=(props) =>{
   return (
     <>
-    <div>
-      <li><button onClick={()=>{
+    <div className='listdiv'>
+      <li className='list'><button className='crossbtn' onClick={()=>{
           props.onselect(props.id);
-      }}>x</button>{props.text}</li>
+      }}><i class="fas fa-trash"></i></button>{props.text} <div className="checkline"><input className='checkbox' type="checkbox" name="check"/></div></li>
     </div>
     </>
   )

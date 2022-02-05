@@ -1,0 +1,107 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Indie+Flower&family=Lora:wght@400;500;600&family=Love+Light&family=Moon+Dance&family=Roboto+Slab&family=Rowdies&family=Source+Sans+Pro:wght@300&family=Syne+Tactile&family=Titillium+Web&family=Vujahday+Script&display=swap');
+
+@mixin align($textalign,$justify,$alignitem) {
+    text-align: $textalign;
+    justify-content: $justify;
+    align-items: $alignitem;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    min-height: 100%;
+}
+.maindiv{
+    height: 100vh;
+    width: 100%;
+    @include align(center,center,center);
+    background-color: purple;
+
+    .container{
+        position: relative;
+        @include align(center,center,center);
+        
+        .title{
+            font-size: xx-large;
+            background-color: purple;
+            padding: 1rem;
+            font-family: 'Syne Tactile', cursive;
+        }
+        .inputfield{
+            font-size: large;
+            padding:1rem;
+            margin: 0.5rem 1rem;
+            outline: none;
+            border-radius: 0.5rem;
+            border: white;
+            width: 60%;
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+            background-color: rgba(255,255,255,0.3);
+            color: aliceblue;
+            &::placeholder{
+                color: rgba($color: #000000, $alpha: 0.5);
+
+            }
+
+        }
+        .addbtn{
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: white;
+            box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+            background-color: rgba(255,255,255,0.3);
+
+            &:hover{
+                cursor: pointer;
+                background-color: rgba($color: #39eb39, $alpha: 1.0);
+            }
+        }
+        .listbox{
+            display: flex;
+            flex-wrap:wrap;
+            @include align(left,center,center);
+        }
+        .listdiv{
+            width: 25%;
+            padding: 0.5rem;
+            margin: 0.5rem;
+            border-radius: 0.5rem;
+            word-break: break-all;
+            background-color: rgba(255,255,255,0.3);
+            box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+
+            .list{
+                list-style: none;
+                .checkline{
+                    float: right;
+                    display: inline;
+                    margin: auto;
+                    // border: solid;
+                }
+                .checkbox{
+
+
+                }
+            }
+        }
+        
+        .crossbtn{
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            border: white;
+            margin: 0.5rem;
+            box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+            background-color: rgba(255,255,255,0.3);
+
+            &:hover{
+                cursor: pointer;
+                background-color: rgba($color: #ff1717, $alpha: 1.0);
+            }
+        }
+    }
+
+}

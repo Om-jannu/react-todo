@@ -1,1 +1,136 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Indie+Flower&family=Lora:wght@400;500;600&family=Love+Light&family=Moon+Dance&family=Roboto+Slab&family=Rowdies&family=Source+Sans+Pro:wght@300&family=Syne+Tactile&family=Titillium+Web&family=Vujahday+Script&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100%;
+}
+
+.maindiv {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: purple;
+}
+
+.maindiv .container {
+  position: relative;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.maindiv .container .title {
+  font-size: xx-large;
+  background-color: purple;
+  padding: 1rem;
+  font-family: 'Syne Tactile', cursive;
+}
+
+.maindiv .container .inputfield {
+  font-size: large;
+  padding: 1rem;
+  margin: 0.5rem 1rem;
+  outline: none;
+  border-radius: 0.5rem;
+  border: white;
+  width: 60%;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
+  color: aliceblue;
+}
+
+.maindiv .container .inputfield::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.maindiv .container .inputfield:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.maindiv .container .inputfield::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.maindiv .container .inputfield::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.maindiv .container .addbtn {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: white;
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.maindiv .container .addbtn:hover {
+  cursor: pointer;
+  background-color: #39eb39;
+}
+
+.maindiv .container .listbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.maindiv .container .listdiv {
+  width: 25%;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  word-break: break-all;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.maindiv .container .listdiv .list {
+  list-style: none;
+}
+
+.maindiv .container .listdiv .list .checkline {
+  float: right;
+  display: inline;
+  margin: auto;
+}
+
+.maindiv .container .crossbtn {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: white;
+  margin: 0.5rem;
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.maindiv .container .crossbtn:hover {
+  cursor: pointer;
+  background-color: #ff1717;
+}
+/*# sourceMappingURL=style.css.map */

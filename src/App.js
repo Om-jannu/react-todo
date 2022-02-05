@@ -2,6 +2,7 @@
 import './App.css';
 import React, { useState } from 'react';
 import Todolist from './components/Todolist';
+import './style/style.css';
 
 function App() {
   const [inputlist,setinputlist] = useState("");
@@ -36,12 +37,12 @@ function App() {
     <>
     <div className="maindiv">
       <div className="container">
-        <h2>TODO List</h2>
+        <h2 className='title'>Wat-TODO</h2>
         <br />
-          <input autoComplete='off' id='inputfield' type="text" placeholder='Add a ToDo' onChange={itemevent}/>
-          <button onClick={addlisthandler}>+</button>
+          <input className='inputfield' autoComplete='off' id='inputfield' type="text" placeholder='Add a ToDo' onChange={itemevent}/>
+          <button className='addbtn' onClick={addlisthandler}><i class="fas fa-plus"></i></button>
         <br />
-        <ol>
+        <ol className='listbox'>
           {/* <li>{inputlist}</li> */
           items.map((itemval,index)=>{
             return <Todolist
