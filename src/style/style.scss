@@ -1,7 +1,6 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Indie+Flower&family=Lora:wght@400;500;600&family=Love+Light&family=Moon+Dance&family=Roboto+Slab&family=Rowdies&family=Source+Sans+Pro:wght@300&family=Syne+Tactile&family=Titillium+Web&family=Vujahday+Script&display=swap');
-
 @mixin align($textalign,$justify,$alignitem) {
     text-align: $textalign;
     justify-content: $justify;
@@ -14,22 +13,37 @@
 }
 body{
     min-height: 100%;
+    font-family: 'Roboto Slab', serif;
+    background-color: purple;
+
 }
 .maindiv{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     @include align(center,center,center);
-    background-color: purple;
 
     .container{
         position: relative;
+        top: 2rem;
+        margin: auto;
         @include align(center,center,center);
-        
+        background-color: rgba(255,255,255,0.7);
+        min-height: 30rem;
+        width: 40%;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+        border-radius: 1rem;
+        border: 1px solid;
+        backdrop-filter: blur(10px);
+
+
         .title{
             font-size: xx-large;
-            background-color: purple;
             padding: 1rem;
             font-family: 'Syne Tactile', cursive;
+            background-color: #ff1717;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            border-bottom: 2px solid black;
         }
         .inputfield{
             font-size: large;
@@ -37,16 +51,13 @@ body{
             margin: 0.5rem 1rem;
             outline: none;
             border-radius: 0.5rem;
-            border: white;
+            border: wheat;
             width: 60%;
             box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
             background-color: rgba(255,255,255,0.3);
-            color: aliceblue;
             &::placeholder{
                 color: rgba($color: #000000, $alpha: 0.5);
-
-            }
-
+            };
         }
         .addbtn{
             padding: 1rem;
@@ -64,27 +75,72 @@ body{
             display: flex;
             flex-wrap:wrap;
             @include align(left,center,center);
+            padding: 0.5rem 0;
+            cursor: default;
         }
         .listdiv{
-            width: 25%;
-            padding: 0.5rem;
-            margin: 0.5rem;
-            border-radius: 0.5rem;
-            word-break: break-all;
-            background-color: rgba(255,255,255,0.3);
-            box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
-
+            width: 85%;
+            display: flex;
             .list{
+                width: 90%;
+                word-break: break-all;
+                border-radius: 0.5rem;
                 list-style: none;
-                .checkline{
-                    float: right;
-                    display: inline;
-                    margin: auto;
-                    // border: solid;
+                // background-color: grey;
+                display: flex;
+                @include align(center,none,center);
+                &:hover{
+                box-shadow: 3px 3px 3px rgba(0,0,0,0.3),3px -3px 3px rgba(0,0,0,0.3);             
                 }
-                .checkbox{
-
-
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 10rem;
+                    border:0.5px solid;
+                    left: 6rem;
+                }
+                .delbtndiv{
+                   
+                }
+                .listtext{
+                   padding:0 0.5rem;
+                   &:hover{
+                       cursor: default;
+                   };
+                }
+                .checkline{
+                    position: relative;
+                    padding: 0 0.5rem;
+                    .checkbox{
+                        appearance: none;
+                        background-color:rgba(255,255,255,0.4);
+                        outline: none;
+                        width: 40px;
+                        height: 20px;
+                        border-radius: 5rem;
+                        margin: auto;
+                        transition: 0.4s;
+                        
+                        &::before{
+                            content: "";
+                            padding: 0.7rem;
+                            position:absolute;
+                            transform: translateY(5px);
+                            transform: scale(1.1);
+                            background-color: #000000;
+                            border-radius: 50%;
+                        };
+                        &:checked{
+                            background-color: red;
+                            &::before{
+                                left: 1.5rem;
+                                transition: 0.5s ease-out;
+                            };
+                            .listdiv::after{
+                                opacity: 1;
+                            }
+                        };
+                    }
                 }
             }
         }
@@ -99,9 +155,23 @@ body{
 
             &:hover{
                 cursor: pointer;
-                background-color: rgba($color: #ff1717, $alpha: 1.0);
+                background-color:#ff1717;
             }
         }
     }
 
+}
+.notext{
+    animation: leftrightmove 0.5s;
+}
+@keyframes leftrightmove{
+    0%{
+        transform: translateX(1rem);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(1rem);
+    }
 }

@@ -6,10 +6,12 @@
 
 body {
   min-height: 100%;
+  font-family: 'Roboto Slab', serif;
+  background-color: purple;
 }
 
 .maindiv {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   text-align: center;
   -webkit-box-pack: center;
@@ -18,11 +20,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: purple;
 }
 
 .maindiv .container {
   position: relative;
+  top: 2rem;
+  margin: auto;
   text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -30,13 +33,25 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  min-height: 30rem;
+  width: 40%;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  border: 1px solid;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 .maindiv .container .title {
   font-size: xx-large;
-  background-color: purple;
   padding: 1rem;
   font-family: 'Syne Tactile', cursive;
+  background-color: #ff1717;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom: 2px solid black;
 }
 
 .maindiv .container .inputfield {
@@ -45,12 +60,11 @@ body {
   margin: 0.5rem 1rem;
   outline: none;
   border-radius: 0.5rem;
-  border: white;
+  border: wheat;
   width: 60%;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   background-color: rgba(255, 255, 255, 0.3);
-  color: aliceblue;
 }
 
 .maindiv .container .inputfield::-webkit-input-placeholder {
@@ -96,27 +110,98 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0.5rem 0;
+  cursor: default;
 }
 
 .maindiv .container .listdiv {
-  width: 25%;
-  padding: 0.5rem;
-  margin: 0.5rem;
-  border-radius: 0.5rem;
-  word-break: break-all;
-  background-color: rgba(255, 255, 255, 0.3);
-  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .maindiv .container .listdiv .list {
+  width: 90%;
+  word-break: break-all;
+  border-radius: 0.5rem;
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.maindiv .container .listdiv .list:hover {
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3), 3px -3px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3), 3px -3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.maindiv .container .listdiv .list::after {
+  content: "";
+  position: absolute;
+  width: 10rem;
+  border: 0.5px solid;
+  left: 6rem;
+}
+
+.maindiv .container .listdiv .list .listtext {
+  padding: 0 0.5rem;
+}
+
+.maindiv .container .listdiv .list .listtext:hover {
+  cursor: default;
 }
 
 .maindiv .container .listdiv .list .checkline {
-  float: right;
-  display: inline;
+  position: relative;
+  padding: 0 0.5rem;
+}
+
+.maindiv .container .listdiv .list .checkline .checkbox {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  outline: none;
+  width: 40px;
+  height: 20px;
+  border-radius: 5rem;
   margin: auto;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.maindiv .container .listdiv .list .checkline .checkbox::before {
+  content: "";
+  padding: 0.7rem;
+  position: absolute;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #000000;
+  border-radius: 50%;
+}
+
+.maindiv .container .listdiv .list .checkline .checkbox:checked {
+  background-color: red;
+}
+
+.maindiv .container .listdiv .list .checkline .checkbox:checked::before {
+  left: 1.5rem;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+
+.maindiv .container .listdiv .list .checkline .checkbox:checked .listdiv::after {
+  opacity: 1;
 }
 
 .maindiv .container .crossbtn {
@@ -132,5 +217,40 @@ body {
 .maindiv .container .crossbtn:hover {
   cursor: pointer;
   background-color: #ff1717;
+}
+
+.notext {
+  -webkit-animation: leftrightmove 0.5s;
+          animation: leftrightmove 0.5s;
+}
+
+@-webkit-keyframes leftrightmove {
+  0% {
+    -webkit-transform: translateX(1rem);
+            transform: translateX(1rem);
+  }
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(1rem);
+            transform: translateX(1rem);
+  }
+}
+
+@keyframes leftrightmove {
+  0% {
+    -webkit-transform: translateX(1rem);
+            transform: translateX(1rem);
+  }
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(1rem);
+            transform: translateX(1rem);
+  }
 }
 /*# sourceMappingURL=style.css.map */

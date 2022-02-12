@@ -22,7 +22,7 @@ function App() {
         inputfield.value="";
         setinputlist("");
       }else{
-        alert("Enter Text you DUMBSHIT")
+        alert("Enter Text you DUMBSHIT");
       }
   };
   const deletelisthandler=(id)=>{
