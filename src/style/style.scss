@@ -29,13 +29,11 @@ body{
         @include align(center,center,center);
         background-color: rgba(255,255,255,0.7);
         min-height: 30rem;
-        width: 40%;
+        width:90%;
         box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
         border-radius: 1rem;
         border: 1px solid;
         backdrop-filter: blur(10px);
-
-
         .title{
             font-size: xx-large;
             padding: 1rem;
@@ -47,7 +45,7 @@ body{
         }
         .inputfield{
             font-size: large;
-            padding:1rem;
+            padding:.7rem;
             margin: 0.5rem 1rem;
             outline: none;
             border-radius: 0.5rem;
@@ -60,10 +58,10 @@ body{
             };
         }
         .addbtn{
-            padding: 1rem;
+            padding: .8rem;
             border-radius: 0.5rem;
             border: white;
-            box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
             background-color: rgba(255,255,255,0.3);
 
             &:hover{
@@ -92,16 +90,7 @@ body{
                 &:hover{
                 box-shadow: 3px 3px 3px rgba(0,0,0,0.3),3px -3px 3px rgba(0,0,0,0.3);             
                 }
-                &::after{
-                    content: "";
-                    position: absolute;
-                    width: 10rem;
-                    border:0.5px solid;
-                    left: 6rem;
-                }
-                .delbtndiv{
-                   
-                }
+                
                 .listtext{
                    padding:0 0.5rem;
                    &:hover{
@@ -111,6 +100,7 @@ body{
                 .checkline{
                     position: relative;
                     padding: 0 0.5rem;
+                    display: flex;
                     .checkbox{
                         appearance: none;
                         background-color:rgba(255,255,255,0.4);
@@ -120,25 +110,25 @@ body{
                         border-radius: 5rem;
                         margin: auto;
                         transition: 0.4s;
-                        
+                        box-shadow: 2px 2px 2px rgba(0,0,0,0.5);   
                         &::before{
                             content: "";
-                            padding: 0.7rem;
+                            padding: 0.5rem;
                             position:absolute;
-                            transform: translateY(5px);
-                            transform: scale(1.1);
+                            top: 0.15rem;
+                            left: 0.6rem;
+                            transform: scale(1.3);
                             background-color: #000000;
                             border-radius: 50%;
+                            box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
                         };
                         &:checked{
                             background-color: red;
                             &::before{
-                                left: 1.5rem;
+                                left: 1.9rem;
                                 transition: 0.5s ease-out;
                             };
-                            .listdiv::after{
-                                opacity: 1;
-                            }
+                            
                         };
                     }
                 }
@@ -152,7 +142,7 @@ body{
             margin: 0.5rem;
             box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
             background-color: rgba(255,255,255,0.3);
-
+            // background-color: #ff1717;
             &:hover{
                 cursor: pointer;
                 background-color:#ff1717;
@@ -161,17 +151,8 @@ body{
     }
 
 }
-.notext{
-    animation: leftrightmove 0.5s;
-}
-@keyframes leftrightmove{
-    0%{
-        transform: translateX(1rem);
+@media (max-width:600px){
+    .container{
+      width: 50%;
     }
-    50%{
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(1rem);
-    }
-}
+  }

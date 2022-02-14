@@ -4,8 +4,9 @@ const Todolist=(props) =>{
     <>
     <div className='listdiv'>
       <li className='list'>
-      <div className="checkline"><input className='checkbox' type="checkbox" name="check"/></div>
-        <div className="listtext">{props.text}</div>
+      <div className="checkline"><input id='cbox' className='checkbox' type="checkbox" name="check"/></div>
+      <div className="listtext">{props.text}</div>
+       
       </li>
       <div className="delbtndiv"><button className='crossbtn' onClick={()=>{
           props.onselect(props.id);

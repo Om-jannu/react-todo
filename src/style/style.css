@@ -35,7 +35,7 @@ body {
           align-items: center;
   background-color: rgba(255, 255, 255, 0.7);
   min-height: 30rem;
-  width: 40%;
+  width: 90%;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   border-radius: 1rem;
@@ -56,7 +56,7 @@ body {
 
 .maindiv .container .inputfield {
   font-size: large;
-  padding: 1rem;
+  padding: .7rem;
   margin: 0.5rem 1rem;
   outline: none;
   border-radius: 0.5rem;
@@ -84,11 +84,11 @@ body {
 }
 
 .maindiv .container .addbtn {
-  padding: 1rem;
+  padding: .8rem;
   border-radius: 0.5rem;
   border: white;
-  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -143,14 +143,6 @@ body {
           box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3), 3px -3px 3px rgba(0, 0, 0, 0.3);
 }
 
-.maindiv .container .listdiv .list::after {
-  content: "";
-  position: absolute;
-  width: 10rem;
-  border: 0.5px solid;
-  left: 6rem;
-}
-
 .maindiv .container .listdiv .list .listtext {
   padding: 0 0.5rem;
 }
@@ -162,6 +154,9 @@ body {
 .maindiv .container .listdiv .list .checkline {
   position: relative;
   padding: 0 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .maindiv .container .listdiv .list .checkline .checkbox {
@@ -176,18 +171,22 @@ body {
   margin: auto;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .maindiv .container .listdiv .list .checkline .checkbox::before {
   content: "";
-  padding: 0.7rem;
+  padding: 0.5rem;
   position: absolute;
-  -webkit-transform: translateY(5px);
-          transform: translateY(5px);
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  top: 0.15rem;
+  left: 0.6rem;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
   background-color: #000000;
   border-radius: 50%;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .maindiv .container .listdiv .list .checkline .checkbox:checked {
@@ -195,13 +194,9 @@ body {
 }
 
 .maindiv .container .listdiv .list .checkline .checkbox:checked::before {
-  left: 1.5rem;
+  left: 1.9rem;
   -webkit-transition: 0.5s ease-out;
   transition: 0.5s ease-out;
-}
-
-.maindiv .container .listdiv .list .checkline .checkbox:checked .listdiv::after {
-  opacity: 1;
 }
 
 .maindiv .container .crossbtn {
@@ -219,38 +214,9 @@ body {
   background-color: #ff1717;
 }
 
-.notext {
-  -webkit-animation: leftrightmove 0.5s;
-          animation: leftrightmove 0.5s;
-}
-
-@-webkit-keyframes leftrightmove {
-  0% {
-    -webkit-transform: translateX(1rem);
-            transform: translateX(1rem);
-  }
-  50% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(1rem);
-            transform: translateX(1rem);
-  }
-}
-
-@keyframes leftrightmove {
-  0% {
-    -webkit-transform: translateX(1rem);
-            transform: translateX(1rem);
-  }
-  50% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(1rem);
-            transform: translateX(1rem);
+@media (max-width: 600px) {
+  .container {
+    width: 50%;
   }
 }
 /*# sourceMappingURL=style.css.map */

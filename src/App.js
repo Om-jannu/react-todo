@@ -21,8 +21,6 @@ function App() {
         });
         inputfield.value="";
         setinputlist("");
-      }else{
-        alert("Enter Text you DUMBSHIT");
       }
   };
   const deletelisthandler=(id)=>{
@@ -31,16 +29,20 @@ function App() {
         return index !== id;
       })
     })
-}
-
+  }
+  const checktext = document.querySelector('input[type="checkbox"]:checked');
+  console.log(checktext);
+  
   return (
     <>
     <div className="maindiv">
       <div className="container">
         <h2 className='title'>Wat-TODO</h2>
         <br />
-          <input className='inputfield' autoComplete='off' id='inputfield' type="text" placeholder='Add a ToDo' onChange={itemevent}/>
+          <form>
+          <input required className='inputfield' autoComplete='off' id='inputfield' type="text" placeholder='Add a ToDo' onChange={itemevent}/>
           <button className='addbtn' onClick={addlisthandler}><i class="fas fa-plus"></i></button>
+          </form>
         <br />
         <ol className='listbox'>
           {/* <li>{inputlist}</li> */
